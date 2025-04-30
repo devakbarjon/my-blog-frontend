@@ -114,7 +114,8 @@ const PostDetail = () => {
         <div className="post-detail-container">
           <h2 className="post-detail-title">{post.title}</h2>
           <img 
-            src={`/static/uploads/posts/${post.id}.jpg`} 
+            src={post.photo}
+            onError={(e) => { e.target.onerror = null; e.target.src = "https://"; }} 
             className="post-detail-img" 
             alt={post.title} 
           />

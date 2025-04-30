@@ -35,7 +35,7 @@ const Portfolio = () => {
             {projects.map(project => (
               <div className="col-md-4" key={project.id}>
                 <a href={project.link} className="portfolio-card" target="_blank" rel="noopener noreferrer">
-                  <img src={`/static/uploads/projects/${project.id}.jpg`} className="portfolio-card-img" alt={project.name} />
+                  <img src={project.photo} className="portfolio-card-img" alt={project.name} />
                   <span className="portfolio-card-overlay">
                     <span className="portfolio-card-caption">
                       <h4>{project.name}</h4>

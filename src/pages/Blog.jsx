@@ -37,7 +37,8 @@ const Blog = () => {
             <div className="blog-card" key={post.id}>
               <div className="blog-card-header">
                 <img 
-                  src={`/static/uploads/posts/${post.id}.jpg`} 
+                  src={post.photo}
+                  onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/150"; }} 
                   className="blog-card-img" 
                   alt={post.title} 
                 />
